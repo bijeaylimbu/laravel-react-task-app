@@ -25,9 +25,7 @@ Simple task manager with user registration, login, and task CRUD. Backend is Lar
    php artisan migrate
 3. Start dev server:
    npm run dev
-4. Run frontend tests:
-   npm test
-
+   
 API endpoints
   POST /api/register  { name, email, password, password_confirmation } -> { user, token }
   POST /api/login     { email, password } -> { user, token }
@@ -39,3 +37,7 @@ API endpoints
   PATCH /api/tasks/{id} (auth) -> update
   DELETE /api/tasks/{id} (auth) -> delete
 
+
+Setup — Frontend
+1. npm install
+2. npm run dev
