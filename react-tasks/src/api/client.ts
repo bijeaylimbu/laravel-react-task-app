@@ -13,10 +13,11 @@ export function clearToken() {
 }
 
 async function request(path: string, options: RequestInit = {}) {
-    const token = getToken();
+  const token = getToken();
   const defaultHeaders: Record<string, string> = {
     'Content-Type': 'application/json',
-     ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    'Accept': 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
   };
 
   let extraHeaders: Record<string, string> = {};
@@ -41,6 +42,7 @@ async function request(path: string, options: RequestInit = {}) {
 
   return res.json().catch(() => null);
 }
+
 
 
 export const api = {
