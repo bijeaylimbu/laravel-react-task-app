@@ -58,7 +58,7 @@ class TaskController extends Controller
 
         $task->update($data);
          return ApiResponse::success(
-            ['tasks' => $task],
+            ['task' => $task],
             'tasks updated successfully',
             201
         );
